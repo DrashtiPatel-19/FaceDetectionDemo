@@ -1,0 +1,2 @@
+com/androchef/cameraxfacedetection/BuildConfig.java
+ com.androchef.cameraxfacedetection.BuildConfig

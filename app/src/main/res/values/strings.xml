@@ -1,0 +1,7 @@
+<resources>
+    <string name="app_name">brainvire.facemovementdemo</string>
+
+    <string name="switch_camera">Switch Camera</string>
+    <string name="distancestatustextview">distanceStatusTextView</string>
+    <string name="textview_status">textView_status</string>
+</resources>
