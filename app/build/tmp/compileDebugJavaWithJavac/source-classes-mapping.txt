@@ -1,2 +1,4 @@
 com/androchef/cameraxfacedetection/BuildConfig.java
  com.androchef.cameraxfacedetection.BuildConfig
+com/androchef/cameraxfacedetection/databinding/ActivityMainBinding.java
+ com.androchef.cameraxfacedetection.databinding.ActivityMainBinding

@@ -2,7 +2,6 @@ package com.androchef.cameraxfacedetection.camerax
 
 import android.content.Context
 import android.util.Log
-import android.widget.TextView
 import androidx.camera.core.Camera
 import androidx.camera.core.CameraSelector
 import androidx.camera.core.ImageAnalysis
@@ -11,7 +10,7 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.camera.view.PreviewView
 import androidx.core.content.ContextCompat
 import androidx.lifecycle.LifecycleOwner
-import com.androchef.cameraxfacedetection.R
+import com.androchef.cameraxfacedetection.databinding.ActivityMainBinding
 import com.androchef.cameraxfacedetection.face_detection.FaceContourDetectionProcessor
 import java.util.concurrent.ExecutorService
 import java.util.concurrent.Executors
@@ -19,6 +18,7 @@ import java.util.concurrent.Executors
 class CameraManager(
     private val context: Context,
     private val finderView: PreviewView,
+    private val binding: ActivityMainBinding,
     private val lifecycleOwner: LifecycleOwner,
     private val graphicOverlay: GraphicOverlay
 ) {
@@ -70,8 +70,11 @@ class CameraManager(
           return FaceContourDetectionProcessor(graphicOverlay)
       }*/
     private fun selectAnalyzer(): ImageAnalysis.Analyzer {
-        val statusTextView = finderView.rootView.findViewById<TextView>(R.id.textView_status)
-        val distanceStatusTextView = finderView.rootView.findViewById<TextView>(R.id.distanceStatusTextView)
+
+        /*val statusTextView = finderView.rootView.findViewById<TextView>(R.id.textView_status)
+        val distanceStatusTextView = finderView.rootView.findViewById<TextView>(R.id.distanceStatusTextView)*/
+        val statusTextView= binding.textViewStatus
+        val distanceStatusTextView = binding.distanceStatusTextView
         return FaceContourDetectionProcessor(graphicOverlay, statusTextView,distanceStatusTextView)
     }
 
