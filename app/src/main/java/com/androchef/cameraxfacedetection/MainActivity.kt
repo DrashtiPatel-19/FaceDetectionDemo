@@ -3,22 +3,31 @@ package com.androchef.cameraxfacedetection
 import android.content.pm.PackageManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.Window
+import android.view.WindowManager
 import android.widget.Toast
 import androidx.core.app.ActivityCompat
 import androidx.core.content.ContextCompat
 import com.androchef.cameraxfacedetection.camerax.CameraManager
-import kotlinx.android.synthetic.main.activity_main.*
+import com.androchef.cameraxfacedetection.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
 
     private lateinit var cameraManager: CameraManager
+    private lateinit var binding: ActivityMainBinding
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContentView(R.layout.activity_main)
+        binding = ActivityMainBinding.inflate(layoutInflater)
+
+        supportRequestWindowFeature(Window.FEATURE_NO_TITLE)
+        window.setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN,WindowManager.LayoutParams.FLAG_FULLSCREEN)
+
         createCameraManager()
         checkForPermission()
         onClicks()
+        setContentView(binding.root)
+
     }
 
     private fun checkForPermission() {
@@ -57,9 +66,10 @@ class MainActivity : AppCompatActivity() {
     private fun createCameraManager() {
         cameraManager = CameraManager(
             this,
-            previewView_finder,
+            binding.previewViewFinder,
+            binding,
             this,
-            graphicOverlay_finder
+            binding.graphicOverlayFinder
         )
     }
 

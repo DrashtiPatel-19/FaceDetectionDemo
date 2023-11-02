@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/drashti_patel/AndroidStudioProjects/CameraX-FaceDetection-MlKit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
+            "outputFile": "/home/drashti_patel/AndroidStudioProjects/demo_projects/FaceRecognizationDemoBrainvire/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-large-v4/values-large-v4.xml",
             "map": [
                 {
                     "source": "/home/drashti_patel/.gradle/caches/transforms-2/files-2.1/0aa09122d9eb272ea1237ac366fa31a3/material-1.2.1/res/values-large-v4/values-large-v4.xml",

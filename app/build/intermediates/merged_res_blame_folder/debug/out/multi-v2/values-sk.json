@@ -1,7 +1,7 @@
 {
     "logs": [
         {
-            "outputFile": "/home/drashti_patel/AndroidStudioProjects/CameraX-FaceDetection-MlKit/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml",
+            "outputFile": "/home/drashti_patel/AndroidStudioProjects/demo_projects/FaceRecognizationDemoBrainvire/app/build/intermediates/incremental/mergeDebugResources/merged.dir/values-sk/values-sk.xml",
             "map": [
                 {
                     "source": "/home/drashti_patel/.gradle/caches/transforms-2/files-2.1/9d4f1333978bc9017bd48f375a3bb862/jetified-play-services-base-17.0.0/res/values-sk/values.xml",
